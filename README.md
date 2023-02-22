@@ -22,7 +22,7 @@
 
 ## 3. Findings
 
-    (insert graph)
+    ![Model](https://github.com/lfontanills/world-bank-education/blob/159093fef9a6c5a8de0a9cad40918bd3e9160492/column_chart.png)
        
     The highest average education expenditure as % of GDP occurs in Low Income countries.  The lowest average education expenditure as % of GDP occurs in High Income, non-OECD countries. OECD (Organization for Economic Co-operation and Dvelopment) is an intergovenmental organization which "establish[es] evidence-based international standards and find[s]solutions to a range of social, economic and environmental challenges." (https://www.oecd.org/about/). 
 
@@ -41,8 +41,10 @@
     - Monaco (Europe & Central Asia, High income non-OECD),
 
     - Romania (Europe & Central Asia, Upper middle income),
-    
+
     - Sri Lanka (South Asia, Lower middle income)
+
+    ![Model](https://github.com/lfontanills/world-bank-education/blob/159093fef9a6c5a8de0a9cad40918bd3e9160492/box_chart.png)
 
     The largest spread of average education expenditure as % of GDP occurs between Lower Middle Income countries (Median = 1.51%, IQR = 1.24%).
 
