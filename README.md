@@ -6,6 +6,9 @@ World Bank International Education database (BigQuery public dataset)
 Dataset id: bigquery-public-data.world_bank_intl_education.
 
 ### 1.2 Data structure
+
+![erd entity relationship diagram](erd_world_bank.png)
+
 The database contains the results of hundreds of educational studies and surveys from the 1990s to today. The database contains four tables, of which I used country_summary, series_summary, and international_education.
 
 The metric I used to analyze the data considered all education spending, including that from international sources, on domestic education. Data on education expenditure as % of GDP (2010 and later) was available for 125 countries. Of these countries, 33 had only one year of data, but across most other countries there was little year-to-year variation in education expenditure.
@@ -60,4 +63,7 @@ Primary education expenditure as % of GDP is greatest in lowest income level cou
 Other countries with lower primary education expenditures as % of GDP merit further investigation - Germany (Europe & Central Asia, High income OECD, 0.63%) has a very low education expenditure compared to other European countries. It would be interesting to research how educational funds are allocated and used in Germany.
     
 This project would be improved with access to more recent data, particularly to investigate how the COVID-19 pandemic impacted education spending in different parts of the world.
+
+## Sources
+
 
