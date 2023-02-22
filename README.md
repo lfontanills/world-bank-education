@@ -1,12 +1,12 @@
 # Analyzing International Primary Education Expenditure since 2010
 
 ## 1. Data Overview
-### 1.1 Database:
+### 1.1 Database
 World Bank International Education database (BigQuery public dataset)
 Dataset id: bigquery-public-data.world_bank_intl_education.
 
 ### 1.2 Data structure
-The database contains the results of numerous educational studies and surveys from the 1990s to today. The database contains four tables, of which I used country_summary, series_summary, and international_education.
+The database contains the results of hundreds of educational studies and surveys from the 1990s to today. The database contains four tables, of which I used country_summary, series_summary, and international_education.
 
 The metric I used to analyze the data considered all education spending, including that from international sources, on domestic education. Data on education expenditure as % of GDP (2010 and later) was available for 125 countries. Of these countries, 33 had only one year of data, but across most other countries there was little year-to-year variation in education expenditure.
 
@@ -20,6 +20,8 @@ The metric I used to analyze the data considered all education spending, includi
       
 
 ## 3. Findings
+
+[Click here](https://docs.google.com/spreadsheets/d/1oEpFithaO01ZUOr5YsnYLGW-5p0qMJ65fumdGoLV560/edit?usp=sharing) to view summarized data in google sheets
 
 ![column chart](column_chart.png)
        
