@@ -1,8 +1,8 @@
-# Analyzing government education expenditure since 2010
-    I investigated how international governments allocate funds to primary school education, grouping countries by income group.
+# Analyzing International Primary Education Expenditure since 2010
+## What %GDP to international governments allocate for primary education?
 
-## Database Overview
-### Dataset
+## Data Overview
+### Database
     World Bank International Education database (BigQuery public dataset)
     - Dataset id: bigquery-public-data.world_bank_intl_education
 ### Data structure
@@ -10,13 +10,14 @@
 
     The metric I used to analyze the data considered all education spending, including that from international sources, on domestic education. Data on education expenditure as % of GDP (2010 and later) was available for 125 countries. Of these countries, 33 had only one year of data, but across most other countries there was little year-to-year variation in education expenditure.
 
-    Each income group contained the following number of countries:
+## Queries
+    
+- (country_summary_info.sql)[https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/country_summary_info.sql]: finding income group classifications, generating lists of countries by income group, determining the number of records by income group, creating a new income group ranking to make sorting easier.
 
-## Analysis
-    
-    
-    
-    
+- (indicators_info.sql)[https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/indicators_info.sql]: finding appropriate metric (a.k.a. _indicator_) and obtaining its unique code, name, and description.
+
+- (eda_international_expenditure.sql)[https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/eda_international_expenditure.sql]: joining tables to analyze expenditure by income group, creating summary statistics to export to a spreadsheet.
+      
 
 ## Findings
 
