@@ -13,16 +13,16 @@
 
 ## 2. Queries
     
-- (country_summary_info.sql)[https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/country_summary_info.sql]: finding income group classifications, generating lists of countries by income group, determining the number of records by income group, creating a new income group ranking to make sorting easier.
+- [country_summary_info.sql](https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/country_summary_info.sql): finding income group classifications, generating lists of countries by income group, determining the number of records by income group, creating a new income group ranking to make sorting easier.
 
-- (indicators_info.sql)[https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/indicators_info.sql]: finding appropriate metric (a.k.a. _indicator_) and obtaining its unique code, name, and description.
+- [indicators_info.sql](https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/indicators_info.sql): finding appropriate metric (a.k.a. _indicator_) and obtaining its unique code, name, and description.
 
-- (eda_international_expenditure.sql)[https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/eda_international_expenditure.sql]: joining tables to analyze expenditure by income group, creating summary statistics to export to a spreadsheet.
+- [eda_international_expenditure.sql](https://github.com/lfontanills/world-bank-education/blob/104a5098cf6e81dd8ef481edbb6253827714e0f2/eda_international_expenditure.sql): joining tables to analyze expenditure by income group, creating summary statistics to export to a spreadsheet.
       
 
 ## 3. Findings
 
-    ![Model](https://github.com/lfontanills/world-bank-education/blob/159093fef9a6c5a8de0a9cad40918bd3e9160492/column_chart.png)
+    ![column chart](column_chart.png)
        
     The highest average education expenditure as % of GDP occurs in Low Income countries.  The lowest average education expenditure as % of GDP occurs in High Income, non-OECD countries. OECD (Organization for Economic Co-operation and Dvelopment) is an intergovenmental organization which "establish[es] evidence-based international standards and find[s]solutions to a range of social, economic and environmental challenges." (https://www.oecd.org/about/). 
 
@@ -44,7 +44,7 @@
 
     - Sri Lanka (South Asia, Lower middle income)
 
-    ![Model](https://github.com/lfontanills/world-bank-education/blob/159093fef9a6c5a8de0a9cad40918bd3e9160492/box_chart.png)
+    ![box chart](box_chart.png)
 
     The largest spread of average education expenditure as % of GDP occurs between Lower Middle Income countries (Median = 1.51%, IQR = 1.24%).
 
