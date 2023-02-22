@@ -2,6 +2,7 @@
 -- UIS.XGDP.1.FSGOV -- Government expenditure on primary education as % of GDP (%)
 
 -- Create CTE to join country_summary with international_education
+-- Identify number of records per country, year range of records per country
 WITH ie AS (
   SELECT 
     CASE 
@@ -28,8 +29,6 @@ WITH ie AS (
     ON ie.country_code = cs.country_code
   WHERE cs.region IS NOT NULL)
 
--- Identify number of records per country, see timeline of records
--- See if there's a large enough sample size to look at more recent records (after 2010)
 SELECT 
   country_code,
   COUNT(year) AS count_records,
@@ -41,10 +40,9 @@ WHERE indicator_code IN ('UIS.XGDP.1.FSGOV') -- Government expenditure on primar
 GROUP BY country_code
 ORDER BY count_records;
 
--- Identify number of records per income group, see timeline of records
--- See if there's a large enough sample size to look at more recent records
--- CTE
-WITH ie AS (
+-- Repeat CTE to join country_summary with international_education
+-- Identify number of countries, number of records, year range BY income group
+WITH ie AS ( -- CTE
   SELECT 
     CASE 
     WHEN cs.income_group IN ('High income: OECD')
@@ -72,6 +70,7 @@ WITH ie AS (
 
 SELECT 
   income_rank,
+  COUNT(DISTINCT country_code) AS count_countries,
   COUNT(year) AS count_records,
   MIN(year) AS min_year,
   MAX(year) AS max_year
@@ -79,11 +78,10 @@ FROM ie
 WHERE indicator_code IN ('UIS.XGDP.1.FSGOV') -- Government expenditure on primary education as % of GDP (%)
   AND year > 2010
 GROUP BY income_rank
-ORDER BY count_records;
+ORDER BY income_rank;
 
--- Identify number of records per region, see timeline of records
--- See if there's a large enough sample size to look at more recent records
--- CTE
+-- Repeat CTE to join country_summary with international_education
+-- Identify number of records per region, see timeline of records 
 WITH ie AS (
   SELECT 
     CASE 
@@ -121,9 +119,8 @@ WHERE indicator_code IN ('UIS.XGDP.1.FSGOV') -- Government expenditure on primar
 GROUP BY region
 ORDER BY count_records;
 
--- Summary statistics - Government expenditure on primary education as % of GDP, by income level, after 2010
--- average and standard deviation
---  CTE
+-- Repeat CTE to join country_summary with international_education
+-- Summary statistics - average, stdev, min, max, range
 WITH ie AS (
   SELECT 
     CASE 
@@ -163,9 +160,8 @@ WHERE indicator_code IN ('UIS.XGDP.1.FSGOV') -- Government expenditure on primar
 GROUP BY income_rank
 ORDER BY income_rank;
 
--- Summary statistics - Government expenditure on primary education as % of GDP, by income level, after 2010
--- min, median, max, quartiles
--- CTE
+-- Repeat CTE to join country_summary with international_education
+-- Summary statistics - quintiles
 WITH ie AS (
   SELECT 
     CASE 
@@ -201,8 +197,8 @@ WHERE indicator_code IN ('UIS.XGDP.1.FSGOV') -- Government expenditure on primar
 GROUP BY income_rank
 ORDER BY income_rank;
 
--- Investigate expenditure for lower middle income group to identify outliers
--- CTE
+-- Repeat CTE to join country_summary with international_education
+-- Look at lower middle income group to identify countries with high averages
 WITH ie AS (
   SELECT 
     CASE 

@@ -1,3 +1,6 @@
+-- INDICATORS AND CODES - EXPENDITURES
+-- UIS.XGDP.1.FSGOV -- Government expenditure on primary education as % of GDP (%)
+
 -- Get list of indicator topics
 SELECT 
   topic,
@@ -13,9 +16,6 @@ WHERE
   (topic IN ('Expenditures')
     AND indicator_name LIKE '%primary%')
   OR topic IN ('Primary');
-
--- INDICATORS AND CODES - EXPENDITURES
--- UIS.XGDP.1.FSGOV -- Government expenditure on primary education as % of GDP (%)
 
 SELECT 
   series_code,

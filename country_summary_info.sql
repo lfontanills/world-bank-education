@@ -1,11 +1,3 @@
--- Explore country_summary table
-SELECT 
-  income_group,
-  COUNT(income_group)
-FROM bigquery-public-data.world_bank_intl_education.country_summary
-GROUP BY income_group;
-
--- Generate a list of countries by income_group, region
 -- short_name, country_code for income group aggregates:
   -- 'High income' -- 'HIC' 
   -- 'Low income' -- 'LIC'
@@ -13,7 +5,16 @@ GROUP BY income_group;
   -- 'Middle income' -- 'MIC'
   -- 'Upper middle income' -- UMC
   -- 'Low & middle income' -- 'LMY'
+  
+-- Explore country_summary table
+SELECT 
+  income_group,
+  COUNT(income_group)
+FROM bigquery-public-data.world_bank_intl_education.country_summary
+WHERE region IN ('Latin America & Caribbean')
+GROUP BY income_group;
 
+-- Generate a list of countries by income_group, region
 SELECT
   income_group,
   country_code,
