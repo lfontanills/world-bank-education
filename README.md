@@ -66,4 +66,8 @@ This project would be improved with access to more recent data, particularly to 
 
 ## Sources
 
-
+- [ERD maker](https://dbdiagram.io/d)
+- [OECD website](https://www.oecd.org/about/)
+- [OECD wikipedia](https://en.wikipedia.org/wiki/OECD)
+- [2014 World Bank income classifications](https://www.worldbank.org/en/news/press-release/2014/07/24/kyrgyz-republic-becomes-lower-middle-income-country#:~:text=As%20of%201%20July%202014,GNI%20per%20capita%20of%20%2412%2C746)
+- [Current World Bank income classifications](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups)
